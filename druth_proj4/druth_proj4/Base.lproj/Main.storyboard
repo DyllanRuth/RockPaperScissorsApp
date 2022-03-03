@@ -50,12 +50,15 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="✌️">
                                                     <attributes>
-                                                        <font key="NSFont" size="72" name=".AppleColorEmojiUI"/>
+                                                        <font key="NSFont" metaFont="system" size="72"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="scissorsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ttn-37-OK6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7L-io-xIj" userLabel="rock">
                                         <rect key="frame" x="138" y="5" width="128" height="158"/>
@@ -64,12 +67,16 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="✊">
                                                     <attributes>
-                                                        <font key="NSFont" size="72" name=".AppleColorEmojiUI"/>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="72"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="rockAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FQL-8y-gAJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lb2-ge-37J" userLabel="paper">
                                         <rect key="frame" x="271" y="5" width="128" height="158"/>
@@ -78,12 +85,15 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="✋">
                                                     <attributes>
-                                                        <font key="NSFont" size="72" name=".AppleColorEmojiUI"/>
+                                                        <font key="NSFont" metaFont="system" size="72"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="paperAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPl-9G-yjY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -104,32 +114,44 @@
                                     <constraint firstItem="Lb2-ge-37J" firstAttribute="width" secondItem="zBM-tV-e6G" secondAttribute="width" id="xyd-fi-stM"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-5k-VCG">
-                                <rect key="frame" x="137" y="474" width="140" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-vT-gAj" userLabel="Play Again Button">
+                                <rect key="frame" x="137" y="454" width="140" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="lKx-hs-lOV"/>
-                                    <constraint firstAttribute="width" constant="140" id="tH8-5W-w48"/>
+                                    <constraint firstAttribute="height" constant="64" id="c5b-hu-IHs"/>
+                                    <constraint firstAttribute="width" constant="140" id="iaS-IX-6FE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Again">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXF-8q-kgJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xcZ-ZQ-9Cw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="8ZQ-eu-ewh"/>
+                            <constraint firstItem="MUF-vT-gAj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8ob-Ed-Xet"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xcZ-ZQ-9Cw" secondAttribute="trailing" constant="5" id="BrR-R3-DpI"/>
                             <constraint firstItem="2j8-5n-4gL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hjw-XD-yGW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2j8-5n-4gL" secondAttribute="trailing" id="Pe3-FR-zsd"/>
                             <constraint firstItem="2j8-5n-4gL" firstAttribute="top" secondItem="sfu-0J-cqN" secondAttribute="bottom" constant="25" id="Piu-c6-IMJ"/>
                             <constraint firstItem="sfu-0J-cqN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S2G-kc-ACR"/>
-                            <constraint firstItem="vVY-5k-VCG" firstAttribute="top" secondItem="xcZ-ZQ-9Cw" secondAttribute="bottom" constant="40" id="bLx-NO-4Ph"/>
                             <constraint firstItem="xcZ-ZQ-9Cw" firstAttribute="top" secondItem="2j8-5n-4gL" secondAttribute="bottom" constant="40" id="bps-Xs-PVk"/>
-                            <constraint firstItem="vVY-5k-VCG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mTQ-Lz-qZC"/>
+                            <constraint firstItem="MUF-vT-gAj" firstAttribute="top" secondItem="xcZ-ZQ-9Cw" secondAttribute="bottom" constant="20" id="w9I-wj-k9M"/>
                             <constraint firstItem="sfu-0J-cqN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wFb-fj-Z9x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="paperButton" destination="Lb2-ge-37J" id="KNE-aK-Tgj"/>
+                        <outlet property="playAgainButton" destination="MUF-vT-gAj" id="Zy5-J6-Bey"/>
+                        <outlet property="rockButton" destination="g7L-io-xIj" id="ELR-Me-XXl"/>
+                        <outlet property="scissorsButton" destination="zBM-tV-e6G" id="Yak-8j-Unk"/>
+                        <outlet property="signLabel" destination="sfu-0J-cqN" id="a4q-vD-9xj"/>
+                        <outlet property="statusLabel" destination="2j8-5n-4gL" id="g14-AP-YxH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
